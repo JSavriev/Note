@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.add.AddNoteActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_centerVertical="true"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_close"
+            android:stateListAnimator="@animator/state_animator"
+            android:tint="@color/colorApp" />
+
+        <ImageButton
+            android:id="@+id/buttonAddPhoto"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/buttonAddAlarm"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_photo"
+            android:stateListAnimator="@animator/state_animator"
+            android:tint="@color/colorApp" />
+
+        <ImageButton
+            android:id="@+id/buttonAddAlarm"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_add_alarm"
+            android:stateListAnimator="@animator/state_animator"
+            android:tint="@color/colorApp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutViews">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="@drawable/bg_edit_text"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:hint="@string/title"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/bg_edit_text"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:hint="@string/description"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGrey"
+                android:textSize="@dimen/text_size_normal" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="@drawable/bg_edit_text">
+
+                <TextView
+                    android:id="@+id/textDeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center"
+                    android:hint="@string/deadline"
+                    android:padding="@dimen/padding_normal"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageButton
+                    android:id="@+id/buttonCancelDeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_toEndOf="@+id/textDeadline"
+                    android:background="@color/colorTransparent"
+                    android:src="@drawable/ic_expired"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAlarm"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingStart="@dimen/padding_normal"
+                android:paddingEnd="@dimen/padding_normal"
+                android:textAllCaps="false"
+                android:textColor="@color/colorApp"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorBack"
+                app:cornerRadius="@dimen/button_radius"
+                app:icon="@drawable/ic_clock"
+                app:iconGravity="start"
+                app:iconPadding="@dimen/padding_small"
+                app:iconTint="@color/colorApp"
+                app:rippleColor="@color/colorRipple"
+                app:strokeColor="@color/colorRipple"
+                app:strokeWidth="@dimen/card_stroke_width" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSave"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingStart="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_normal"
+                android:paddingEnd="@dimen/padding_large"
+                android:paddingBottom="@dimen/padding_normal"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorApp"
+                android:textSize="@dimen/text_size_regular"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="start"
+                app:iconPadding="@dimen/padding_normal"
+                app:iconTint="@color/colorApp" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

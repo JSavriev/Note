@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="active">Active</string>
+    <string name="add_alarm">Add alarm</string>
+    <string name="add_image">Add image</string>
+    <string name="add_note">Add Note</string>
+    <string name="app_name">Note</string>
+    <string name="cancel">Cancel</string>
+    <string name="deadline">Deadline</string>
+    <string name="delete">Delete</string>
+    <string name="description">Description</string>
+    <string name="done">Done</string>
+    <string name="expired">Expired</string>
+    <string name="hour_five">5 hour</string>
+    <string name="hour_one">1 hour</string>
+    <string name="hour_three">3 hour</string>
+    <string name="hour_two">2 hour</string>
+    <string name="note_image">Note Image</string>
+    <string name="notes">Notes</string>
+    <string name="period">Period</string>
+    <string name="save">Save</string>
+    <string name="successfully_created">Successfully created</string>
+    <string name="successfully_updated">Successfully updated</string>
+    <string name="take_photo">Take photo</string>
+    <string name="title">Title</string>
+    <string name="title_error">Title to\'ldirilishi kerak</string>
+    <string name="update">Update</string>
+</resources>

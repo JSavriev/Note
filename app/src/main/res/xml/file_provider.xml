@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="note"
+        path="Android/data/sj.note.app/files/Pictures" />
+</paths>

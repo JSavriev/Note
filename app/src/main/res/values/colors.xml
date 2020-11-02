@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorApp">#AB6DF8</color>
+    <color name="colorBack">#FCFAFF</color>
+    <color name="colorBlack">#101010</color>
+    <color name="colorRipple">#33AB6DF8</color>
+    <color name="colorRed">#f44336</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGrey">#A39BAD</color>
+</resources>
